@@ -140,6 +140,3 @@ class Matrix:
                 return False
 
         return True
-
-    #seconds edit ...
-    #third edit
