@@ -1,5 +1,5 @@
 # Matrix Calculator
-#### :microphone: :memo:
+#### No Libraries have been used yet
 
 ## Current Progress:
 - 2 Dimensional Array is working! update any individual value or a whole row! :speech_balloon:
