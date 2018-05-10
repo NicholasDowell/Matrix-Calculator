@@ -108,6 +108,8 @@ class Matrix:
         #when all columns have zeros above and below pivots, its done! the matrix is in RREF
 
 
+    # looks through each row,
+    # if it contains all zeroes, interchange it with the lowest nonzero row
     def put_all_zero_rows_on_bottom(self):
         number_of_zero_rows = 0
         row_index = 0
@@ -123,8 +125,7 @@ class Matrix:
                 self.row_interchange(self.height-number_of_zero_rows, self.v[row_index])
             row_index += 1
 
-        # looks through each row,
-            #if it contains all zeroes, interchange it with the lowest nonzero row
+
 
     def row_interchange(self, row1, row2):
         #pass in two row numbers (INTEGERS)  those two rows of te matrix will be interchanged with each other
@@ -132,8 +133,7 @@ class Matrix:
         self.v[row1] = self.v[row2]
         self.v[row2] = temp
 
-        #PAss in a row number! (integer index)
-
+        #PAss in a row number! (integer index of the row you are checking to see if its zero)
     def row_is_all_zero(self, row):
         for x in self.v[row]:
             if x != 0:
