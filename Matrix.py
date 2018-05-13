@@ -39,7 +39,6 @@ class Matrix:
     #column_index represents the current index in the new column (the value that is being placed into the matrix)
     # the passed column must have the same number of entries as the number of rows in the matrix
     def replace_column(self, column_number, new_column):
-
         #What do you do to replace a column?
         column_index = 0
         for x in self.v:
@@ -76,67 +75,8 @@ class Matrix:
         column = []
         for x in range(self.height):
             column.append(self.v[x][column_index])
-
         return column
 
     #returns the value stored at one coordinate of the matrix
     def get_value(self, row, column):
         return self.v[row][column]
-
-
-    #changes the stored matrix into a row reduced echelon form
-    def rref(self):
-        print(1)
-        #does the thing
-
-        ## Step 1: regular echelon form
-            #all numbers below pivot are zero
-            #all pivots to the right of above pivots
-            #all nonzero rows are above all rows of zeros
-        #ECHELON LOOP
-        #Find the first nonzero column.
-        #pick a number to be the pivot in that column
-        #interchange rows to put that number in the first row
-        #create all zeros below the pivot
-        #That column is done for now. "Ignore" that column and the row its in for now.
-        #If there are more columns to echelonize, repeat loop.
-
-        ##now RREF LOOP
-        # now starting with the rightmost pivot, zero the positions above all pivots
-
-
-        #when all columns have zeros above and below pivots, its done! the matrix is in RREF
-
-
-    # looks through each row,
-    # if it contains all zeroes, interchange it with the lowest nonzero row
-    def put_all_zero_rows_on_bottom(self):
-        number_of_zero_rows = 0
-        row_index = 0
-        for x in self.v:
-            #check if its zero
-            #if its zero, switch it
-            #then check to make sure the new one isnt zero
-            if self.row_is_all_zero(x):
-                self.row_interchange(self.height-number_of_zero_rows, self.v[row_index])
-                number_of_zero_rows += 1
-
-            if self.row_is_all_zero(x):
-                self.row_interchange(self.height-number_of_zero_rows, self.v[row_index])
-            row_index += 1
-
-
-
-    def row_interchange(self, row1, row2):
-        #pass in two row numbers (INTEGERS)  those two rows of te matrix will be interchanged with each other
-        temp = self.v[row1]
-        self.v[row1] = self.v[row2]
-        self.v[row2] = temp
-
-        #PAss in a row number! (integer index of the row you are checking to see if its zero)
-    def row_is_all_zero(self, row):
-        for x in self.v[row]:
-            if x != 0:
-                return False
-
-        return True
