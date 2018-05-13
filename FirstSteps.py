@@ -1,4 +1,4 @@
-
+##FirstSteps is an older set of tests that is not incompatible with the code
 #This file will be nick's practice for creating a Matrix
 #First steps are to :
 #   1: Create a 2 dimensional array
