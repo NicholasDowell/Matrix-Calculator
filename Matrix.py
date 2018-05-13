@@ -1,6 +1,6 @@
 #This will be the fundamental matrix that is used for Matrix Operations
 # it stores a 2d grid of values
-
+#11
 #To DO: Restrict the methods so that they will not resize the matrix when they shouldnt
 
 #CONVENTION is [ROW][COLUMN]  BE CAREFUL
