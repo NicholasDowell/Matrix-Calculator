@@ -8,10 +8,10 @@
 from Matrix import Matrix
 n = Matrix(3, 5)
 
-n.replace_value(1, 0, 0)
-n.replace_value(2, 0, 1)
-n.replace_value(3, 0, 2)
-n.replace_value(4, 0, 3)
+n.set_value(1, 0, 0)
+n.set_value(2, 0, 1)
+n.set_value(3, 0, 2)
+n.set_value(4, 0, 3)
 n.print()
 print("W")
 n.add_column([7, 7, 3])
