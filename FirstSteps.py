@@ -33,3 +33,5 @@ n.row_interchange(0,2)
 n.print()
 
 print(n.row_is_all_zero(0))
+
+

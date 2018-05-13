@@ -32,10 +32,7 @@ class Matrix:
 
     # returns a list containing all elements of one row of the matrix
     def get_row(self, row_index):
-        row = []
-        for column in range(self._width):
-            row.append(self._data[row_index][column])
-        return row
+        return self._data[row_index]
 
     def set_row(self, row_index, new_row):
         self._data[row_index] = new_row
@@ -60,11 +57,3 @@ class Matrix:
     # returns the data stored in the matrix
     def get_data(self):
         return self._data
-
-    # PAss in a row number! (integer index of the row you are checking to see if its zero)
-    def row_is_all_zero(self, row):
-        for column in self._data[row]:
-            if column != 0:
-                return False
-
-        return True
