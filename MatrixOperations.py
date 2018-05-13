@@ -111,32 +111,34 @@ def row_interchange(A, row1_index, row2_index):
     A.set_row(row1_index, A.get_row(row2_index))
     A.set_row(row2_index, temp)
 
-    #matrix row add operation to add a row into another row
-    def row_add(A, row_index1, row_index2):
-        row1 = A.get_row(row_index1)
-        row2 = A.get_row(row_index2)
 
-        if len(row1) != len(row2):  #this should never happen
-            print("Error! Attempting to add rows of different lengths")
-            return A
+# matrix row add operation to add a row into another row
+def row_add(A, row_index1, row_index2):
+    row1 = A.get_row(row_index1)
+    row2 = A.get_row(row_index2)
 
-        for x in range(len(row1)):  #both rows have the same legth
-            row1[x] += row2[x]
+    if len(row1) != len(row2):  #this should never happen
+        print("Error! Attempting to add rows of different lengths")
+        return A
 
-        A.set_row(row_index1, row1)
+    for x in range(len(row1)):  #both rows have the same legth
+        row1[x] += row2[x]
 
-    #matrix row scale operation, scales the row at A[row_index] by scale factor
-    def row_scale(A, row_index, scale_factor):
-        row = A.get_row(row_index)
-        for x in range(len(row)):
-            row[x] *= scale_factor
-        A.set_row(row_index, row)
+    A.set_row(row_index1, row1)
 
 
-    #Scales row 2 and adds it to row 1, but then scales row2 back so that it is unchanged
-    #row_index1 and row_index 2 are expected to be integer values < the number of rows in A
-    def row_scaled_add(A, row_index1, row_index2, scale_factor):
-        row_scale(A, row_index2, scale_factor)
-        row_add(A, row_index1, row_index2)
-        inverse_scale_factor = 1 / scale_factor
-        row_scale(A, row_index2, inverse_scale_factor)
+# matrix row scale operation, scales the row at A[row_index] by scale factor
+def row_scale(A, row_index, scale_factor):
+    row = A.get_row(row_index)
+    for x in range(len(row)):
+        row[x] *= scale_factor
+    A.set_row(row_index, row)
+
+
+# Scales row 2 and adds it to row 1, but then scales row2 back so that it is unchanged
+# row_index1 and row_index 2 are expected to be integer values < the number of rows in A
+def row_scaled_add(A, row_index1, row_index2, scale_factor):
+    row_scale(A, row_index2, scale_factor)
+    row_add(A, row_index1, row_index2)
+    inverse_scale_factor = 1 / scale_factor
+    row_scale(A, row_index2, inverse_scale_factor)

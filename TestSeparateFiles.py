@@ -51,5 +51,16 @@ MatrixOperations.put_all_zero_rows_on_bottom(myMatrix)
 MatrixOperations.printout(myMatrix)
 
 
+print("Adding Row 2 to row 1")
+MatrixOperations.row_add(myMatrix, 0, 1)
+MatrixOperations.printout(myMatrix)
 
+print("Scaling row 2 by times 4")
+MatrixOperations.row_scale(myMatrix, 2, 4)
+MatrixOperations.printout(myMatrix)
 
+print("Adding 10x row 2 to row 3")
+MatrixOperations.row_scaled_add(myMatrix, 3, 2, 10)
+MatrixOperations.printout(myMatrix)
+
+print("All row numbers used here are the INDEXES STARTING AT row 0 (or column 0)")
