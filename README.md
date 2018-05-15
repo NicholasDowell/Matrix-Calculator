@@ -1,4 +1,4 @@
-# Matrix Calculator
+# Matrix Calculator :calculator:
 #### The completed Matrix calculator will perform calculations on Matrices
 #### Functionality will include:
   - Matrix X Matrix multiplication
@@ -7,7 +7,14 @@
   - Eigenvalues
   - Least-Squares Problems
 
-## Next Steps:
+## Directory: :blue_book:
+- MatrixOperations.py holds all of the current methods for working with Matrices
+- Matrix.py is the actual Matrix object, holding the actual 2 dimensional array and its dimensions
+- TestSeparateFiles.py is an executable set of tests that check functionality of some methods of the MatrixOperations class
+- FirstSteps.py :no_entry_sign: holds some archaic test code from before the "BIG SWITCH". If you run it, then you will get a many errors.
+
+## Next Steps: :boot:
+- Update MatrixOperations functions to control incorrectly sized rows and columns
 - Get RREF function working. Necessary steps are outlined in the comments in "MatrixOperations" object
 - Move Python files on github into a folder for organizational purposes
 
@@ -20,7 +27,7 @@
 
 
 ## Notes:
-- The project mainly focuses on material covered in Foothill's MATH 2B Course (Linear Algebra).
+- The project mainly focuses on material covered in Foothill's MATH 2B Course (Linear Algebra). :mortar_board:
 ### This includes, but is not limited to:
  - Row Reduced Echelon Form
   - Parametric Descriptions of Solutions
