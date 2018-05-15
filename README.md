@@ -47,4 +47,3 @@
   - Inner product, Length, Orthogonality (Chapter 6.1)
   - Orthogonal Projections
   - Least-Squares problems
-  
