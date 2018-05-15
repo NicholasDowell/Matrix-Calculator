@@ -8,7 +8,7 @@
   - Least-Squares Problems
 
 ## Next Steps:
-- Get RREF function working. Necessary steps are outlined in the comments of "Matrix" object
+- Get RREF function working. Necessary steps are outlined in the comments in "MatrixOperations" object
 - Move Python files on github into a folder for organizational purposes
 
 ## Recent Progress:
