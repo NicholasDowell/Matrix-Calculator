@@ -1,4 +1,4 @@
-# Matrix Calculator :calculator:
+# Matrix Calculator
 #### The completed Matrix calculator will perform calculations on Matrices
 #### Functionality will include:
   - Matrix X Matrix multiplication
