@@ -1,8 +1,10 @@
-##The MatrixOperations class includes a group of methods that allow the matrix to be used for row reduction operations
+# The MatrixOperations class includes a group of methods that allow the matrix to be used for row reduction operations
 # prints out all values stored in the matrix to the console
-#2
+import MatrixExceptions
+from MatrixExceptions import RowSizeException
 
 
+# Prints out each value stored in the mateix
 def printout(a):
     row_string = ""
     for row in range(a.get_height()):
@@ -14,6 +16,14 @@ def printout(a):
 
 # replaces a row in the matrix with the passed new row
 def replace_row(A, row_number, new_row):
+    matrix_width = A.get_width()
+    row_size = len(new_row)
+    if row_size > matrix_width:
+        raise RowSizeException(
+            "Tried to place a row with {0} elements into a Matrix with only {1} Columns"
+            .format(row_size, matrix_width))
+        return
+
     print("Setting row {0} to {1}".format(row_number, new_row))
     A.set_row(row_number, new_row)
 
@@ -96,6 +106,7 @@ def put_all_zero_rows_on_bottom(A):
 
 
 # PAss in a row number! (integer index of the row you are checking to see if its zero)
+# returns true if the passed list contains only 0 elements
 def row_is_all_zero(row):
     for value in row:
         if value != 0:
@@ -117,11 +128,11 @@ def row_add(A, row_index1, row_index2):
     row1 = A.get_row(row_index1)
     row2 = A.get_row(row_index2)
 
-    if len(row1) != len(row2):  #this should never happen
+    if len(row1) != len(row2):  # this should never happen
         print("Error! Attempting to add rows of different lengths")
         return A
 
-    for x in range(len(row1)):  #both rows have the same legth
+    for x in range(len(row1)):  # both rows have the same legth
         row1[x] += row2[x]
 
     A.set_row(row_index1, row1)
