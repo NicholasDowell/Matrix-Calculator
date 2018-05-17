@@ -14,11 +14,13 @@
 - FirstSteps.py :no_entry_sign: holds some archaic test code from before the "BIG SWITCH". If you run it, then you will get a many errors.
 
 ## Next Steps: :boot:
+- Add a "ToString" method in the Matrix class so that its not necessary to call the clunky "printout" method of MatrixOperations
 - Update MatrixOperations functions to control incorrectly sized rows and columns
 - Get RREF function working. Necessary steps are outlined in the comments in "MatrixOperations" object
 - Move Python files on github into a folder for organizational purposes
 
 ## Recent Progress:
+- Added File to contain exceptions to make it easier to work with the code
 - Row Scaling is functional :chart_with_upwards_trend:  
   (Please run the TestSeparateFiles code to see a console demonstration)
 - Moving all rows of all zeros to bottom is functional! 
