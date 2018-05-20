@@ -69,7 +69,7 @@ def rref(A):
     # all pivots to the right of above pivots
     # all nonzero rows are above all rows of zeros
     # ECHELON LOOP
-    # Find the first nonzero column.
+    # Find the first nonzero column. (column_is_all_zero())
     # pick a number to be the pivot in that column
     # interchange rows to put that number in the first row
     # create all zeros below the pivot
@@ -110,6 +110,16 @@ def put_all_zero_rows_on_bottom(A):
 def row_is_all_zero(row):
     for value in row:
         if value != 0:
+            return False
+
+    return True
+
+
+# Pass in a "column" in the form of a list of integers.
+# Returns true only if every integer in the list is zero
+def column_is_all_zero(column):
+    for number in column:
+        if number != 0:
             return False
 
     return True
